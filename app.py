@@ -1,17 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask,render_template
 
-app = Flask(__name__) 
+app = Flask(__name__)
 
 @app.route("/")
 def home():
-    name ="Preeti "
-    last_nm="Jaiswal"
-    course ="flask"
-    city ='pune'
-    age=23
-    return render_template("index.html", name = name,last_nm=last_nm, 
-                           course=course, city=city, age=age)
+    is_logged_in = True
+    marks = 49
+    return render_template("index.html",is_logged_in=is_logged_in,marks=marks)
 
-if __name__ =="__main__":
+if __name__ == "__main__":
     app.run(debug=True)
-    

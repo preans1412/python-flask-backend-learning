@@ -4,16 +4,21 @@
     <title>Hello World Page</title>
 </head>
 <body>
-<h2>{{"welcome " + name }}</h1>
-    <h1>{{name}}{{ last_nm | upper}}</h1>
-    <h1>{{name}}{{ last_nm | lower}}</h1>
-     <h1>{{"hellooooo" | upper}}</h1>
-      <h1>{{"hellooooo" | lower}}</h1>
-     <h1>{{"hellooooo" | title}}</h1>
-    <h1>{{"hellooooo" | capitalize}}</h1>
-    <h2> Course: {{course}} </h2>
-    <h2> City: {{city}} </h2>
-     <h2> Age: {{age}} </h2>
-     <p>age after 5 year: {{age+5}}</p>
+   {% if is_logged_in %}
+    <h1>Welcome Back!</h1>
+    {% else %}
+    <h1>Please Login </h1>
+    {% endif %}
+
+    {% if marks >= 90%}
+    <h2>Grade A</h2>
+    {% elif marks >= 75 %}
+    <h2>Grade B</h2>
+    {% elif marks >= 50 %}
+    <h2>Grade C</h2>
+    {% else %}
+    <h1>Fail</h1>
+    {% endif %}
+
 </body>
 </html>
