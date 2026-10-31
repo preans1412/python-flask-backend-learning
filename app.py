@@ -1,14 +1,11 @@
-from flask import Flask, request
+from flask import Flask, render_template
 
-app = Flask(__name__) # flask app obj store 
+app = Flask(__name__) 
 
-@app.route("/search")
-def search():
-    name = request.args.get("name","Guest")
-    course = request.args.get("course","unknown")
-    return f"{name} is learning {course}"
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 if __name__ =="__main__":
     app.run(debug=True)
     
-# search?name=preeti 
