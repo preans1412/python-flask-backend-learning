@@ -4,7 +4,16 @@
     <title>Hello World Page</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p> this is My HTML Page</p>
+<h2>{{"welcome " + name }}</h1>
+    <h1>{{name}}{{ last_nm | upper}}</h1>
+    <h1>{{name}}{{ last_nm | lower}}</h1>
+     <h1>{{"hellooooo" | upper}}</h1>
+      <h1>{{"hellooooo" | lower}}</h1>
+     <h1>{{"hellooooo" | title}}</h1>
+    <h1>{{"hellooooo" | capitalize}}</h1>
+    <h2> Course: {{course}} </h2>
+    <h2> City: {{city}} </h2>
+     <h2> Age: {{age}} </h2>
+     <p>age after 5 year: {{age+5}}</p>
 </body>
 </html>
